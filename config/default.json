@@ -1,0 +1,5 @@
+{
+    "port": 5500,
+    "jwtSecret": "kicha fedor",
+    "mongoURI": "mongodb+srv://kichafed:qwerty123456@cluster0.phzet.mongodb.net/app?retryWrites=true&w=majority"
+}
