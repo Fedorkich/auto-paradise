@@ -1,0 +1,153 @@
+.page_aboutUs {
+
+    height: 1650px;
+}
+
+.description {
+    position: absolute;
+    top: 100px;
+    width: 700px;
+}
+
+.description1 {
+    position: absolute;
+    top: 500px;
+    right: 0;
+}
+
+.logo {
+    line-height: 60px;
+    font-size: 35px;
+    font-family: 'Lavishly Yours', cursive;
+}
+
+.img {
+    position: absolute;
+    width: 600px;
+    height: 230px;
+    box-shadow: 4px 4px 15px rgb(6 12 70 / 30%);
+    border-radius: 8px;
+}
+
+.mersedes {
+    background: url(https://www.fsg.by/img/cms/remont-mercedes.jpg) no-repeat;
+    background-size: cover;
+    top: 80px;
+    right: 60px;
+}
+
+.bmw {
+    background: url(https://media.cdn.teamtailor.com/images/s3/teamtailor-production/gallery_picture-v1/image_uploads/3c14ba13-a2d1-46f7-a367-e4be2c3e52e8/original.jpg) no-repeat;
+    background-size: cover;
+    top: 500px;
+}
+
+
+.paragraph_description {
+    text-align: center;
+    width: 700px;
+    margin-top: 10px;
+    box-shadow: 2px 4px 15px rgb(6 12 70 / 10%);
+
+}
+
+.paragraph_description span {
+    font-weight: 900;
+}
+
+
+.reviews {
+    position: absolute;
+    width: 100%;
+    top: 900px;
+    height: 480px;
+    background: url(https://chromium.themes.zone/local/wp-content/uploads/sites/4/revslider/chromium-slider-b/new_slide_2.jpg) no-repeat;
+    background-size: cover;
+}
+
+.title_reviews {
+    text-align: center;
+}
+
+.reviewsItems {
+    width: 730px;
+    height: 360px;
+    margin: 60px auto;
+    background-color: aqua;
+}
+
+.wrapperReviews {
+    position: relative;
+    width: 730px;
+    height: 290px;
+    margin: 10px auto;
+    overflow: hidden;
+    background-color: beige;
+}
+
+
+.numbers {
+    position: absolute;
+    height: 150px;
+    width: 100%;
+    top: 1450px;
+}
+
+.wrapper_block_numbers {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.wrapper_numbers {
+    height: 70px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item_number {
+    position: relative;
+    width: 290px;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 10px;
+    box-shadow: 2px 4px 15px rgb(6 12 70 / 10%);
+}
+
+.item_number::after {
+    font-family: FontAwesome;
+    font-size: 40px;
+    margin-left: 15px;
+    color: orange;
+}
+
+
+
+.item_one::after {
+    content: '\f164';
+}
+
+.item_two::after {
+    content: '\f1b9';
+}
+
+.item_three::after {
+    content: '\f0b1';
+}
+
+.item_number span {
+    position: absolute;
+    left: 75px;
+}
+
+.span_first {
+    font-size: 25px;
+    color: black;
+}
+
+.span_second {
+    font-size: 17px;
+    margin-left: 40px;
+    top: 40px;
+    color: rgb(109, 110, 110);
+}

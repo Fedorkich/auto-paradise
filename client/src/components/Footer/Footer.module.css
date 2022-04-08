@@ -1,0 +1,195 @@
+.footer {
+    position: relative;
+    height: 500px;
+    padding-top: 30px;
+    background-color: #212121;
+}
+
+.title_footer {
+    line-height: 60px;
+    font-size: 35px;
+    color: white;
+    font-family: 'Lavishly Yours', cursive;
+}
+
+.info_footer {
+    position: absolute;
+    top: 90px;
+    color: white;
+}
+
+.info_footer div {
+    width: 205px;
+    margin-top: 10px;
+    
+}
+
+.item_info::before {
+    color: #7A7A7A;
+    padding-right: 10px;
+    font-family: FontAwesome;
+}
+
+.address::before {
+   content:  "\f041";
+   
+}
+
+
+
+.phone::before {
+    content: "\f095";
+    
+
+   
+}
+
+.email::before {
+    content: "\f0e0";
+}
+
+
+
+.social_media {
+    position: absolute;
+    top: 300px;
+}
+
+.title_social_media {
+    color: orange;
+    font-size: 18px;
+    height: 25px;
+}
+
+.list_social_media {
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+    margin-top: 20px;
+    list-style: none;
+}
+
+.link_social_media i {
+    width: 42px;    
+    height: 40px;
+    font-size: 22px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 8px;
+    align-items: center;
+    font-family: FontAwesome;
+    background-color: #567d9c ;
+}
+
+.link_social_media i:hover {
+    opacity: 0.4;
+}
+
+.instagram {        
+    content: '\f16d';
+    font-family: FontAwesome;
+    color: white;      
+}
+
+.twitter i {
+    background-color: #6EC1E4;
+    color: white;
+}
+
+.google i {
+    background-color: red;
+    color: white;
+}
+
+.facebook i {
+    background-color: #3b5a9a;
+    color: white;
+}
+
+.sections_footer {
+    position: absolute;
+    left: 500px;
+    display: flex;
+}
+
+.sections_list {
+    position: absolute;
+    padding-left: 14px;
+    margin-top: 40px;
+    color: orange;
+    width: 280px;
+}
+
+
+
+.list2 {
+    left: 300px;
+}
+
+.sections_list li{
+    line-height: 40px;
+}
+
+.sections_list li a {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.item {
+    color: whitesmoke;
+}
+
+.item:hover {
+    color: #7A7A7A;
+}
+
+.active {
+    color: orange;
+}
+
+.partners_footer {
+    position: absolute;
+    right: 100px;
+}
+
+.list_partners {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.item_partners {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: FontAwesome;
+    line-height: 40px;
+}
+
+.item_partners:hover {
+    color: #7A7A7A;
+    
+}
+
+.yandex::before {
+    content: '\f413';
+    margin-right: 10px;
+    color: #e40518;
+}
+
+.yahoo:before {
+    content: '\f19e';
+    margin-right: 10px;
+    color: antiquewhite;
+}
+
+.bolt::before {
+    content: '\f0e7';
+    margin-right: 10px;
+    color: rgb(21, 255, 0);
+}
+
+.apple::before {
+    content: '\f179';
+    margin-right: 10px;
+    color: #7A7A7A;
+}

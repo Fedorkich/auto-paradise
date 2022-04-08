@@ -1,0 +1,44 @@
+.buttons_Header {
+    position: absolute;
+    display: flex;
+    width: 320px;   
+    right: 0;
+    padding-right: 0;
+    top: 10px;  
+  }
+    
+  .buttons_Header button {
+    cursor: pointer;
+    line-height: 40px;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    border: none;
+    
+  }
+  
+  .button_sighIn {
+    background-color: transparent;
+    color: orange;
+  }
+  
+  .button_sighIn:hover {
+    color: #212121;
+    transition: 0.6s;
+  }
+  
+  .button_add {
+    position: absolute;
+    right: 0;
+    background-color: orange;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 9px;
+    margin-left: 20px;
+  }
+  
+  .button_add:hover {
+    color: white;
+    background-color: #212121;
+    transition: 0.6s;
+  }

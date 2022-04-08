@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Montserrat:ital,wght@1,200;1,500&family=Poppins:ital,wght@0,500;1,600&family=Raleway:wght@400;500;600&family=Sawarabi+Gothic&family=Shizuru&family=Titillium+Web:ital@0;1&display=swap');
+
+.wrapper {
+    position: relative;
+    display: flex;
+    width: 1640px;
+    margin: 0 auto;
+    /* background-color: aqua; */
+}
+
+
+
+/* slick */
+.slick-slide >div {
+    background-color: transparent !important;
+}
+
+.slick-active  > div {
+    background-color: #9eadb6;
+    
+}
+
+/*------------------------------------------*/

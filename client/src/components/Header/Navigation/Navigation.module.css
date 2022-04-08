@@ -1,0 +1,92 @@
+.link_header {
+    display: flex;
+    list-style: none;
+    position: absolute;
+    display: flex;
+    width: 600px;
+    max-width: 600px;
+    justify-content: space-between;
+    /* background-color: rgb(97, 97, 37); */
+    left: 450px;
+    font-size: 25px;
+}
+
+.link_header a {
+    width: 150px;
+    text-align: center;
+    
+    line-height: 60px;
+    text-decoration: none;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.nav_auto {
+    height: 60px;
+}
+
+.nav_auto a{
+    display: block;
+    width: 150px;
+    text-align: center;
+    line-height: 60px;
+    height: 100%;
+    text-decoration: none;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-weight: 600;
+}
+
+.nav_auto li a {
+    display: inline;
+}
+
+.item {
+    color: #212121;
+}
+
+.item:hover {
+    background-color: #212121;
+    transition: 1s;
+    color: white;
+}
+
+.active {
+    background-color: #212121;
+    transition: 1s;
+    color: white;
+    line-height: 40px;
+}
+
+.list_nav {
+    position: absolute;
+    top: 60px;
+    display: none;
+    padding-right: 20px;
+    padding-left: 10px;
+    list-style: none;
+    background-color: #212121;
+    color: white;
+    z-index: 1;
+}
+
+.nav_auto a:hover ~  .list_nav {
+    display: block;  
+  }
+  
+  .list_nav:hover {
+    display: block;
+  }
+  
+  .nav_auto:hover  > .link_auto  {  
+    background-color: #212121; 
+    color: white;
+  }
+  
+  .list_nav li .item:hover {
+    color: orange;
+  }
+  
+  .list_nav li a {
+    color: white;
+  }
