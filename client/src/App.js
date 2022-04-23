@@ -12,6 +12,7 @@ import FinancePage from './components/Pages/FinancePage/FinancePage';
 import AboutUsPage from './components/Pages/AboutUsPage/AboutUsPage';
 import TiresPage from './components/Pages/TiresPage/TiresPage';
 import Footer from './components/Footer/Footer';
+import RegistrationPage from './components/Pages/RegistrationPage/Registration';
 
 
 
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/news" element={<NewsPage />} />
           <Route path="/finance" element={<FinancePage />} />
           <Route path="/aboutus" element={<AboutUsPage />} />
+          <Route path="/registration" element={<RegistrationPage />} />
         </Routes>
 
         <Footer />

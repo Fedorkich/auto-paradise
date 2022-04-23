@@ -4,7 +4,6 @@ const jwt = require('jsonwebtoken');
 const config = require('config');
 const { check, validationResult } = require('express-validator');
 const User = require('../models/User');
-const { response } = require('express');
 const router = Router();
 
 //обработка двух пост-запросов
@@ -35,8 +34,9 @@ router.post(
             const hashedPassword = await bcrypt.hash(password, 12);
             const user = new User({ email: email, password: hashedPassword });
             await user.save();
-            res.status(201).json({ message: 'Пользователь успешно создан.' });
+            res.json({ message: 'Пользователь успешно создан.' });
         } catch (error) {
+            console.log(error);
             res.status(500).json({ message: 'Что-то пошло не так, попробуйте снова!!' })
         }
     })
