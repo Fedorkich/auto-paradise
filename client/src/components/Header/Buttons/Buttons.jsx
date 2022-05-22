@@ -8,7 +8,7 @@ const Buttons = () => {
     const navigate = useNavigate();
     return (
         <div className={s.buttons_Header}>
-            <button className={s.button_sighIn}>Войти</button>
+            <button className={s.button_sighIn} onClick={() => navigate("/authorization")}>Войти</button>
             <button className={s.button_add} onClick={() => navigate("/registration")}>Подать объявление</button>
         </div>
     )

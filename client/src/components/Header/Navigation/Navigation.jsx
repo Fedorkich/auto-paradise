@@ -2,7 +2,10 @@ import { NavLink } from "react-router-dom";
 
 import s from './Navigation.module.css';
 
-const Navigation = () => {
+const Navigation = (props) => {
+
+   
+
     return (
 
         <div className={s.link_header}>
@@ -32,7 +35,7 @@ const Navigation = () => {
             </div>
             
             <NavLink to="/tires" className={navData => navData.isActive ? s.active : s.item}>Шины</NavLink>
-            <NavLink to="/news" className={navData => navData.isActive ? s.active : s.item}>Новости</NavLink>
+            <NavLink to="/news" onClick={props.newsData} className={navData => navData.isActive ? s.active : s.item}>Новости</NavLink>
             <NavLink to="/finance" className={navData => navData.isActive ? s.active : s.item}>Финансы</NavLink>
             <NavLink to="/aboutus" className={navData => navData.isActive ? s.active : s.item}>О нас</NavLink>
             

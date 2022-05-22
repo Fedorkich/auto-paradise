@@ -5,13 +5,22 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { state } from './redux/state';
-import { rerenderTree } from './render';
+import { newsData } from './redux/state';
 
 
 
 
-rerenderTree(state);
+export let rerenderTree = (state) => {
+   
+  ReactDOM.render(
+    <React.StrictMode>
+      <App arrayNews={state.arrayNews} newsData={newsData} />
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
+}
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

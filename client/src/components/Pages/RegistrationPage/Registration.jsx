@@ -1,47 +1,95 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { registration } from '../../../actions/User';
-import { useNavigate } from "react-router-dom"
+import { registration, authorization } from '../../../actions/User';
+import { useNavigate } from "react-router-dom";
+
 
 import s from './Registration.module.css';
 
 
+// const submitForm = (data) => {
+//     registration(email, password).then((res) => {
+//         if (res) {
+//             setPositiveResult(res.message);
+//             setTimeout(()=>{
+//                 navigate("/tires")
+//             },2000)
+//         }
+//         else {
+//             errorRegisrt.error = res;
+//             setError(res);
+//         }
+
+//     })
+//         .catch(e => console.log(e))
+// }
 
 
-const RegistrationPage = () => {
+
+
+const RegistrationPage = (props) => {
     const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const [errorR, setErrorR] = useState("");
     const [positiveResult, setPositiveResult] = useState("");
     const navigate = useNavigate();
+
     let errorRegisrt = {
         name: "error"
     };
-    const [password, setPassword] = useState("");
+    
     const {
         register, //позволяет регистрировать различные поля для формы
         formState: {
             errors
         },
         handleSubmit,
-    } = useForm()
+    } = useForm();
+
 
     const changeHandlerInputEmail = (event) => {
         setErrorR("");
-        setPositiveResult("")
+        setPositiveResult("");
         setEmail(event.target.value);
     }
 
     const changeHandlerInputPassword = (event) => {
+        setErrorR("");
+        setPositiveResult("");
         setPassword(event.target.value);
     }
 
+    // const submitForm = (data) => {
+    //     registration(email, password).then((res) => {
+    //         console.log(res)
+    //         if (res.data) {
+    //             console.log(res)
+    //             setPositiveResult(res.data.message);              
+    //             // setTimeout(()=>{
+    //             //     navigate("/tires")
+    //             // },2000)
+    //         }
+    //         else {                
+    //             errorRegisrt.error = res;
+    //             setErrorR(res);
+    //         }
+
+    //     })
+    //         .catch(e => console.log(e))
+    // }
+
     const submitForm = (data) => {
-        registration(email, password).then((res) => {
+        setErrorR("");
+        props.functionSubmit(email, password).then((res) => {
+            console.log(res)
             if (res.data) {
                 setPositiveResult(res.data.message);
-                setTimeout(()=>{
+                console.log(res)
+                setTimeout(() => {
                     navigate("/tires")
-                },2000)
+                    setEmail("");
+                    setPassword("");
+                }, 2000);
             }
             else {
                 errorRegisrt.error = res;
@@ -51,6 +99,7 @@ const RegistrationPage = () => {
         })
             .catch(e => console.log(e))
     }
+
 
     return (
         <div className={s.wrapper_form}>
@@ -116,7 +165,7 @@ const RegistrationPage = () => {
                         <input
                             className={s.input_item}
                             type="submit"
-                            value="submit"
+                            value={props.actionName}
                         />
                     </div>
                 </form>

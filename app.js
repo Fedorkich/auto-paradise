@@ -11,7 +11,8 @@ const PORT = config.get('port') || 5500;
 
 app.use(corsMiddleware);
 app.use(express.json());
-app.use('/api/auth', require('./routes/auth.routes'))
+app.use('/api/auth', require('./routes/auth.routes'));
+app.use('/api/auto', require('./routes/auto.routes'));
 
 async function start() {
     try {

@@ -11,7 +11,7 @@ const router = Router();
 // /api/auth/register
 
 router.post(
-    '/register',
+    '/registration',
     [
         check('email', 'Некорректный email!!!').isEmail(),
         check('password', 'Миинмальная длина пароля 6 символов')
@@ -43,7 +43,7 @@ router.post(
 
 // /api/auth/login
 
-router.post('/login',
+router.post('/authorization',
     [
         check('email', 'Вветите корректный email').normalizeEmail().isEmail(),
         check('password', 'Введите пароль').exists(),
@@ -72,7 +72,7 @@ router.post('/login',
                 config.get('jwtSecret'),
                 {expiresIn: '1h'} //время жизни токена
             )
-            res.json({token, userEmail: user.email});
+            res.json({token, userEmail: user.email,message: 'Вход выполнен успешно'});
         } catch (error) {
             res.status(500).json({ message: 'Что-то пошло не так, попробуйте снова!!' })
         }
